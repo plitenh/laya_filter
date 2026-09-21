@@ -1,18 +1,17 @@
-新闻集成 · 批注矫正正确性 + 偏好
+Intégration d’actualités — annotation (faits + préférences)
 
-抓取/汇聚新闻
-      │
-      ▼
- Laya 预测 (fact + preference)
-      │
-      ▼
- 批注台 desk
-   marks: keep | fix | flag
-      │
-      ├─ field DIFF (before → after)
-      │     diffs.md / diffs.unified.txt
-      │
-      └─ annotated_gold.jsonl → 回归训练
+collecte
+   │
+   ▼
+prédiction Laya
+   │
+   ▼
+pupitre  keep | fix | flag
+   │
+   ├─ DIFF de champs
+   └─ annotated_gold → réentraînement
 
-事实轴: factual, claim_status
-偏好轴: channel, publish, salience
+faits: factual, claim_status
+préférences: channel, publish, salience
+
+Interface locale: zh + en (pas le français du dépôt).

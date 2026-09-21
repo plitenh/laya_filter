@@ -8,11 +8,13 @@ import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 import paths as _paths
+sys.path.insert(0, _paths.AGENT)
 sys.path.insert(0, os.path.join(_paths.AGENT, "m1"))
 sys.path.insert(0, os.path.join(_paths.AGENT, "annotate"))
 
 from schema import AXES, QUESTIONS, label_space
 from diff import document_diff, render_markdown, render_unified
+from i18n import LANG, guide_lines
 
 ANNOTATE = os.path.join(_paths.AGENT, "annotate")
 
@@ -81,55 +83,16 @@ def build_pack(corpus_path, out_dir=ANNOTATE, limit=40, seed=0):
             "gold_hint": gold,  # only for demo key; strip in public sheet if needed
         })
 
-    guide = [
-        "# 新闻集成 · 批注说明",
-        "",
-        "批注用来**矫正正确性**，不是重新写作。对每个字段打标记：",
-        "",
-        "| 标记 | 含义 |",
-        "|---|---|",
-        "| `keep` | 模型该字段正确，维持 |",
-        "| `fix` | 写成 `after`，矫正入库 |",
-        "| `flag` | 存疑，不进金标 |",
-        "",
-        "## 事实轴",
-        "",
-    ]
-    for field in AXES["fact"]:
-        q = QUESTIONS[field]
-        guide.append("- **%s**（%s）：%s" % (field, q["type"], q["instructions"]))
-        if q.get("criteria"):
-            if isinstance(q["criteria"], dict):
-                for k, v in q["criteria"].items():
-                    guide.append("  - `%s` %s" % (k, v))
-            else:
-                for i, v in enumerate(q["criteria"]):
-                    guide.append("  - `%d` %s" % (i, v))
-    guide += ["", "## 偏好轴", ""]
-    for field in AXES["preference"]:
-        q = QUESTIONS[field]
-        guide.append("- **%s**（%s）：%s" % (field, q["type"], q["instructions"]))
-        if q.get("criteria"):
-            if isinstance(q["criteria"], dict):
-                for k, v in q["criteria"].items():
-                    guide.append("  - `%s` %s" % (k, v))
-            else:
-                for i, v in enumerate(q["criteria"]):
-                    guide.append("  - `%d` %s" % (i, v))
+    guide = guide_lines(QUESTIONS, AXES)
     guide += [
-        "",
-        "## 答卷格式",
-        "",
         "```json",
         json.dumps({
             "id": "news-0001",
             "marks": {"factual": "fix", "channel": "keep"},
             "after": {"factual": False},
-            "notes": {"factual": "标题夸大，正文未证实"},
+            "notes": {"factual": "headline overstates the body" if LANG == "en" else "标题夸大，正文未证实"},
         }, ensure_ascii=False, indent=2),
         "```",
-        "",
-        "只写要动的字段即可；未写的字段默认：与模型相同则 `keep`，不同则 `fix`。",
         "",
     ]
     guide_path = os.path.join(out_dir, "annotate_guide.md")
