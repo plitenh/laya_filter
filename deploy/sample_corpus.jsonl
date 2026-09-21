@@ -1,0 +1,14 @@
+{"id":"bill-1","state":{"subject":"Duplicate charge on invoice 4411","body":"Hi, we were billed twice for March. Please refund the duplicate today or we will cancel our plan."},"gold":{"department":"billing","urgency":2,"churn_risk":true,"refund_requested":true}}
+{"id":"bill-2","state":{"subject":"Wrong invoice total","body":"The March invoice includes a seat we cancelled in February. Please correct the bill and refund the difference."},"gold":{"department":"billing","urgency":1,"churn_risk":false,"refund_requested":true}}
+{"id":"tech-1","state":{"subject":"Checkout API 500","body":"Production checkout has been returning 500s for twenty minutes. Customers cannot pay. Please page the on-call engineer."},"gold":{"department":"technical","urgency":2,"churn_risk":false,"refund_requested":false}}
+{"id":"tech-2","state":{"subject":"Webhook retries failing","body":"Our integration webhook has been timing out since this morning. No customer data was charged twice, we just need the bug fixed."},"gold":{"department":"technical","urgency":1,"churn_risk":false,"refund_requested":false}}
+{"id":"sales-1","state":{"subject":"Pricing for 200 seats","body":"We are evaluating your product for a new contract. Can you send enterprise pricing for 200 seats?"},"gold":{"department":"sales","urgency":1,"churn_risk":false,"refund_requested":false}}
+{"id":"sales-2","state":{"subject":"Annual plan quote","body":"Please send a quote for an annual plan. We have not purchased yet and this is not urgent."},"gold":{"department":"sales","urgency":0,"churn_risk":false,"refund_requested":false}}
+{"id":"other-1","state":{"subject":"Change timezone","body":"Where do I change the timezone in my profile settings? No rush, just a how-to question."},"gold":{"department":"other","urgency":0,"churn_risk":false,"refund_requested":false}}
+{"id":"dup-1","state":{"subject":"Duplicate charge on invoice 4411","body":"Hi, we were billed twice for March. Please refund the duplicate today or we will cancel our plan."},"gold":{"department":"billing","urgency":2,"churn_risk":true,"refund_requested":true}}
+{"id":"short-1","state":"thanks"}
+{"id":"short-2","state":"ok"}
+{"id":"zh-1","state":"请立刻退款，否则我们取消套餐。"}
+{"id":"zh-2","state":"线上结账接口一直报错，请马上处理。"}
+{"id":"pseudo-1","state":"Invoice 8821 was charged twice this morning. I need the extra payment refunded."}
+{"id":"vague-1","state":"Hello, I had a question about something in the app when you have a moment."}

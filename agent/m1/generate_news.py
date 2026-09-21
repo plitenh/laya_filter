@@ -70,7 +70,7 @@ def main():
     parser.add_argument("--n", type=int, default=120)
     parser.add_argument("--out", default=None)
     args = parser.parse_args()
-    out = args.out or os.path.join(_paths.DATA, "sample.jsonl")
+    out = args.out or os.path.join(_paths.DATA, "news_seed.jsonl")
     os.makedirs(os.path.dirname(out), exist_ok=True)
     rows = generate(args.n)
     with open(out, "w") as f:

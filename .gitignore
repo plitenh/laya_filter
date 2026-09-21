@@ -226,18 +226,3 @@ deploy/state/
 *.log
 .laya-venv/
 laya-venv/
-
-# generated corpora and review dumps; keep agent/data/sample.jsonl
-.github/
-agent/out/
-agent/data/news_seed.jsonl
-agent/data/seed_500.jsonl
-agent/annotate/*.jsonl
-agent/annotate/*.md
-agent/annotate/diffs.unified.txt
-agent/annotate/pack.json
-agent/annotate/last_annotate.json
-agent/quiz/*.jsonl
-agent/quiz/*.md
-agent/quiz/pack.json
-agent/quiz/last_grade.json
