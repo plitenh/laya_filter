@@ -38,13 +38,13 @@
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# 1) 种子新闻语料
-python agent/m1/generate_news.py --n 120
+# 1) 仓库只带一份样例；更多条本地生成（不入库）
+python agent/m1/generate_news.py --n 8 --out agent/data/sample.jsonl
 
-# 2) 生成批注台（含假 Laya 漂移，便于离线看 diff）
-python agent/annotate/desk.py build --corpus agent/data/news_seed.jsonl --limit 40
+# 2) 批注台
+python agent/annotate/desk.py build --corpus agent/data/sample.jsonl --limit 8
 
-# 3) 演示批注并出 diff
+# 3) 演示 diff
 python agent/annotate/desk.py demo
 
 # 查看
@@ -81,11 +81,10 @@ python agent/annotate/desk.py demo
 
 | 路径 | 内容 |
 |------|------|
-| `agent/m1/schema.py` | 新闻两轴标签空间 |
-| `agent/annotate/diff.py` | 字段 diff / Markdown / unified |
-| `agent/annotate/desk.py` | 批注台 CLI |
-| `agent/data/news_seed.jsonl` | 种子新闻（生成） |
-| `deploy/` | 推理服务与 MAPE-K 骨架 |
+| `agent/m1/schema.py` | 主配置：事实轴 / 偏好轴 |
+| `agent/data/sample.jsonl` | 唯一入库样例（8 条） |
+| `agent/annotate/diff.py` | 字段 diff |
+| `agent/annotate/desk.py` | 批注台 |
 
 接真 Laya：先 `collect` 把 `answers.*.prediction` 写进语料，再 `desk.py build`；有 `answers` 时不再用假漂移。
 

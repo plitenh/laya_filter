@@ -57,6 +57,8 @@ def main():
     parser.add_argument("--min-conf", type=float, default=0.15)
     parser.add_argument("--filter-only", action="store_true")
     args = parser.parse_args()
+    if not args.corpus:
+        args.corpus = os.path.join(os.path.dirname(__file__), "..", "agent", "data", "sample.jsonl")
 
     records = _read_jsonl(args.corpus)
     questions = questions_for(args.preset)
