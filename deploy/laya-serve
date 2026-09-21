@@ -1,0 +1,6 @@
+#!/bin/bash
+DIR="$(cd "$(dirname "$0")" && pwd)"
+export LAYA_FILTER_ROOT="${LAYA_FILTER_ROOT:-$(cd "$DIR/.." && pwd)}"
+export PYTHONPATH="$LAYA_FILTER_ROOT:$DIR:${PYTHONPATH:-}"
+cd "$DIR"
+exec python3 "$DIR/serve.py" "$@"

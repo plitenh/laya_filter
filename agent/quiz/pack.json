@@ -1,0 +1,34 @@
+{
+  "guide": "agent/quiz/guide.md",
+  "exam": "agent/quiz/exam.jsonl",
+  "answer_key": "agent/quiz/answer_key.jsonl",
+  "answer_sheet_template": "agent/quiz/answer_sheet.template.jsonl",
+  "n_questions": 32,
+  "by_decision": {
+    "department": 8,
+    "urgency": 8,
+    "churn_risk": 8,
+    "refund_requested": 8
+  },
+  "label_spaces": {
+    "department": [
+      "billing",
+      "technical",
+      "sales",
+      "other"
+    ],
+    "urgency": [
+      "0:not urgent",
+      "1:soon",
+      "2:critical deadline or blocking issue"
+    ],
+    "churn_risk": [
+      "false",
+      "true"
+    ],
+    "refund_requested": [
+      "false",
+      "true"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "items": 40,
+  "fixes": 19,
+  "flags": 1,
+  "gold_rows": 40,
+  "diffs_jsonl": "/tmp/laya_filter/agent/annotate/diffs.jsonl",
+  "diffs_md": "/tmp/laya_filter/agent/annotate/diffs.md",
+  "diffs_unified": "/tmp/laya_filter/agent/annotate/diffs.unified.txt",
+  "gold": "/tmp/laya_filter/agent/annotate/annotated_gold.jsonl"
+}

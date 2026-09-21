@@ -1,0 +1,357 @@
+--- laya/news-0001
++++ annotate/news-0001
+ preference/channel: tech
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0002
++++ annotate/news-0002
+ preference/channel: business
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0003
++++ annotate/news-0003
+ preference/channel: politics
+ fact/claim_status: misleading
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0004
++++ annotate/news-0004
+ preference/channel: tech
+ fact/claim_status: outdated
+ fact/factual: False
+ preference/publish: False
+-preference/salience: 2
++preference/salience: 0
+ # 矫正正确性
+
+--- laya/news-0005
++++ annotate/news-0005
+ preference/channel: society
+ fact/claim_status: unverifiable
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0006
++++ annotate/news-0006
+ preference/channel: sports
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0007
++++ annotate/news-0007
+ preference/channel: business
+ fact/claim_status: misleading
+ fact/factual: False
+-preference/publish: True
++preference/publish: False
+ # 矫正正确性
+ preference/salience: 0
+
+--- laya/news-0008
++++ annotate/news-0008
+ preference/channel: politics
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+-preference/salience: 2
++preference/salience: 0
+ # 版面偏好调整
+
+--- laya/news-0009
++++ annotate/news-0009
+ preference/channel: tech
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0010
++++ annotate/news-0010
+ preference/channel: business
+-fact/claim_status: misleading
++fact/claim_status: accurate
+ # 矫正正确性
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0011
++++ annotate/news-0011
+ preference/channel: politics
+ fact/claim_status: misleading
+? fact/factual: True  # FLAG 拿不准，先旗标
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0012
++++ annotate/news-0012
+ preference/channel: tech
+ fact/claim_status: outdated
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0013
++++ annotate/news-0013
+ preference/channel: society
+ fact/claim_status: unverifiable
+ fact/factual: True
+ preference/publish: True
+-preference/salience: 0
++preference/salience: 1
+ # 矫正正确性
+
+--- laya/news-0014
++++ annotate/news-0014
+ preference/channel: sports
+ fact/claim_status: accurate
+-fact/factual: False
++fact/factual: True
+ # 矫正正确性
+ preference/publish: True
+-preference/salience: 1
++preference/salience: 0
+ # 版面偏好调整
+
+--- laya/news-0015
++++ annotate/news-0015
+ preference/channel: business
+ fact/claim_status: misleading
+ fact/factual: False
+ preference/publish: False
+-preference/salience: 0
++preference/salience: 1
+ # 版面偏好调整
+
+--- laya/news-0016
++++ annotate/news-0016
+ preference/channel: politics
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0017
++++ annotate/news-0017
+ preference/channel: tech
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0018
++++ annotate/news-0018
+ preference/channel: business
+ fact/claim_status: accurate
+ fact/factual: True
+-preference/publish: False
++preference/publish: True
+ # 矫正正确性
+ preference/salience: 1
+
+--- laya/news-0019
++++ annotate/news-0019
+ preference/channel: politics
+-fact/claim_status: unverifiable
++fact/claim_status: misleading
+ # 矫正正确性
+ fact/factual: False
+ preference/publish: False
+-preference/salience: 0
++preference/salience: 1
+ # 版面偏好调整
+
+--- laya/news-0020
++++ annotate/news-0020
+ preference/channel: tech
+ fact/claim_status: outdated
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0021
++++ annotate/news-0021
+ preference/channel: society
+ fact/claim_status: unverifiable
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0022
++++ annotate/news-0022
+ preference/channel: sports
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+-preference/salience: 0
++preference/salience: 1
+ # 矫正正确性
+
+--- laya/news-0023
++++ annotate/news-0023
+ preference/channel: business
+ fact/claim_status: misleading
+ fact/factual: False
+-preference/publish: True
++preference/publish: False
+ # 矫正正确性
+ preference/salience: 0
+
+--- laya/news-0024
++++ annotate/news-0024
+ preference/channel: politics
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0025
++++ annotate/news-0025
+ preference/channel: tech
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0026
++++ annotate/news-0026
+ preference/channel: business
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+-preference/salience: 1
++preference/salience: 0
+ # 版面偏好调整
+
+--- laya/news-0027
++++ annotate/news-0027
+ preference/channel: politics
+ fact/claim_status: misleading
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0028
++++ annotate/news-0028
+ preference/channel: tech
+ fact/claim_status: outdated
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0029
++++ annotate/news-0029
+-preference/channel: politics
++preference/channel: society
+ # 矫正正确性
+ fact/claim_status: unverifiable
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0030
++++ annotate/news-0030
+ preference/channel: sports
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+-preference/salience: 0
++preference/salience: 1
+ # 矫正正确性
+
+--- laya/news-0031
++++ annotate/news-0031
+ preference/channel: business
+-fact/claim_status: unverifiable
++fact/claim_status: misleading
+ # 矫正正确性
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0032
++++ annotate/news-0032
+ preference/channel: politics
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0033
++++ annotate/news-0033
+-preference/channel: other
++preference/channel: tech
+ # 矫正正确性
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
+
+--- laya/news-0034
++++ annotate/news-0034
+ preference/channel: business
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0035
++++ annotate/news-0035
+ preference/channel: politics
+ fact/claim_status: misleading
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0036
++++ annotate/news-0036
+-preference/channel: politics
++preference/channel: tech
+ # 矫正正确性
+ fact/claim_status: outdated
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0037
++++ annotate/news-0037
+ preference/channel: society
+ fact/claim_status: unverifiable
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0038
++++ annotate/news-0038
+ preference/channel: sports
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 1
+
+--- laya/news-0039
++++ annotate/news-0039
+ preference/channel: business
+ fact/claim_status: misleading
+ fact/factual: False
+ preference/publish: False
+ preference/salience: 0
+
+--- laya/news-0040
++++ annotate/news-0040
+ preference/channel: politics
+ fact/claim_status: accurate
+ fact/factual: True
+ preference/publish: True
+ preference/salience: 2
